@@ -17,7 +17,7 @@ El sistema sigue el patrón **Controller-Service**, separando la lógica de las 
 * **Backend**: Node.js / Express / TypeScript.
 * **Base de Datos**: Supabase (PostgreSQL).
 * **Frontend**: SSR con Tailwind CSS.
-* **Integraciones**: PokeAPI.
+* **Integraciones**: PokeAPI o Postman.
 
 ---
 
