@@ -1,0 +1,87 @@
+🧪 Manual de Pruebas Postman (TechStore API)
+Este archivo contiene los ejemplos exactos para probar cada funcionalidad del sistema.
+
+Configuración Global: > * Método: Según la tabla.
+
+URL: http://localhost:3000 + el endpoint.
+
+Headers: Content-Type: application/json
+
+Body: Seleccionar raw -> JSON.
+
+1. Módulo de Categorías 📁
+
+Listar Categorías
+Método: GET
+
+URL: /categories
+
+Crear Categoría
+Método: POST
+
+URL: /categories
+
+JSON
+{
+  "name": "Laptops & PC"
+}
+Actualizar Categoría
+Método: PATCH
+
+URL: /categories/1
+
+JSON
+{
+  "name": "Gaming Setup"
+}
+
+2. Módulo de Productos 📦
+Crear Producto
+Método: POST
+
+URL: /products
+
+JSON
+{
+  "name": "Teclado Mecánico RGB",
+  "price": 79.99,
+  "stock": 25,
+  "category_id": 1
+}
+Actualización Parcial (Stock o Precio)
+Método: PATCH
+
+URL: /products/1
+
+JSON
+{
+  "price": 69.99,
+  "stock": 50
+}
+
+3. Módulo de Órdenes (Ventas) 🧾
+Crear Orden de Venta
+Método: POST
+
+URL: /orders
+
+JSON
+{
+  "customerName": "Mateo AI",
+  "items": [
+    {
+      "productId": 1,
+      "quantity": 2
+    }
+  ]
+}
+Ver Historial de Órdenes
+Método: GET
+
+URL: /orders
+
+4. Servicios Especiales 🌐
+Consulta de Pokémon (Externo)
+Método: GET
+
+URL: /pokemon/charizard
